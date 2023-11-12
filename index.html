@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wether app</title>
+    <!-- <link rel="stylesheet" href="style.css">
+     -->
+     <style>
+        *{
+    color: aliceblue;
+    text-shadow: 1px 1px 14px black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background: linear-gradient(45deg, royalblue, pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main{
+    background: #fafafa59;
+    border: 2px solid white;
+    box-shadow: 1px 1px 12px 6px lavender;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.main > div{
+    height: 50%;
+    width: 100%;
+}
+
+.top{
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+h1{
+    
+    font-size: 37px;
+    /* color: white; */
+}
+.top > h4{
+    /* color: white; */
+    margin-top: 70px;
+}
+.top > .temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 44px
+
+} 
+.top .temp h4{
+    font-size: 23px;
+    /* color: white; */
+}
+
+.top .temp span{
+        position: relative;
+        top: 13px;
+         font-size: 18px;
+}
+.mintamp{
+    color: #ffff5b;
+}
+.maxtemp{
+    color: #f53434;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+}
+.currenttime{
+    position: relative;
+    top: 103px;
+    font-size: 17px;
+
+}
+#input{
+    width: 100%;
+    margin-top: 44px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-shadow: none;
+
+}
+.bottom button{
+    padding: 6px 27px;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    text-shadow: none;
+    font-size: 17px;
+    box-shadow: none;
+}
+
+@media screen and (max-width:380px) {
+
+   
+    .main{
+       border: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, royalblue, #f55e79);
+    border-radius: 0px;
+    }
+}
+     </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+                <h1> {sun} </h1>
+                <span class="temp"> <h4> {temp} c </h4> 
+                    <span><span class="mintamp">  {mintamp} </span><span class="maxtemp">  {maxtemp} </span></span>
+                </span>
+                
+                <span class="currenttime">
+                    <span class="time"> {time} </span>
+                    <span class="date"> {date} </span>
+                 </span>
+        </div>
+        <div class="bottom">
+            <span> <input type="text" id="input" placeholder="Enter Your City Name" value="London"> </span>  <button id="trgr"> click </button> 
+           
+        </div>
+    </div>
+    <script >
+        
+    
+        let button =document.getElementById("trgr");
+        button.addEventListener("click",()=>{
+                let input =document.getElementById("input").value;
+
+                alert(input)
+                console.log(input)
+        })
+    console.log(input)
+
+    </script>
+</body>
+</html>

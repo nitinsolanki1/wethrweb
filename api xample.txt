@@ -1,0 +1,93 @@
+api xample
+
+http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
+by city name
+https://api.openweathermap.org/data/2.5/weather?q= {London} &appid={API key}
+https://api.openweathermap.org/data/2.5/weather?q=London&appid=e8c12e604202041881f574efe4f0e952
+
+
+api key
+e8c12e604202041881f574efe4f0e952
+
+json format responsae
+{
+  "coord": {
+    "lon": 10.99,
+    "lat": 44.34
+  },
+  "weather": [
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 298.48,
+    "feels_like": 298.74,
+    "temp_min": 297.56,
+    "temp_max": 300.05,
+    "pressure": 1015,
+    "humidity": 64,
+    "sea_level": 1015,
+    "grnd_level": 933
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 0.62,
+    "deg": 349,
+    "gust": 1.18
+  },
+  "rain": {
+    "1h": 3.16
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1661870592,
+  "sys": {
+    "type": 2,
+    "id": 2075663,
+    "country": "IT",
+    "sunrise": 1661834187,
+    "sunset": 1661882248
+  },
+  "timezone": 7200,
+  "id": 3163858,
+  "name": "Zocca",
+  "cod": 200
+}                        
+
+
+
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"base":"stations","main":{"temp":282,"feels_like":279.45,"temp_min":280.64,"temp_max":283.3,"pressure":993,"humidity":87},"visibility":10000,"wind":{"speed":4.63,"deg":350},"clouds":{"all":100},"dt":1699623007,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1699600150,"sunset":1699633181},"timezone":0,"id":2643743,"name":"London","cod":200}
+{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"base":"stations","main":{"temp":282,"feels_like":279.45,"temp_min":280.64,"temp_max":283.3,"pressure":993,"humidity":87},"visibility":10000,"wind":{"speed":4.63,"deg":350},"clouds":{"all":100},"dt":1699623007,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1699600150,"sunset":1699633181},"timezone":0,"id":2643743,"name":"London","cod":200}
+npm requiets
+
+npm install --save requests
+
+
+var requests = require('requests');
+
+Now that we've included the library we can start making requests. The exported method accepts 2 arguments:
+
+url Required URL that you want to have requested.
+options Optional object with additional configuration options:
+streaming Should we use streaming API's to fetch the data, defaults to false.
+method The HTTP method that should be used to get the contents, defaults to GET.
+mode The request mode, defaults to cors
+headers Object with header name/value that we need to send to the server.
+timeout The timeout in ms before we should abort the request.
+manual Manually open the request, defaults to false.
+
+requests('https://google.com/foo/bar', { streaming })
+.on('data', function (chunk) {
+  console.log(chunk)
+})
+.on('end', function (err) {
+  if (err) return console.log('connection closed due to errors', err);
+ 
+  console.log('end');
+});
