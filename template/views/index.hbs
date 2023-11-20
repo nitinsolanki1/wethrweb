@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wether app</title>
+        {{>links}}
+        {{>style}}   
+</head>
+<body>
+    
+    {{>navbar}}
+    <div class="container-">
+        
+    <div class="main">
+        <div class="top">
+                <h1 class="logo"> {sun} </h1>
+                <span class="temp"> <h4 class="mtemp"> {temp} c </h4> 
+                    <span><span class="mintemp">  {mintamp} </span> <span class="maxtemp">  {maxtemp} </span></span>
+                </span>
+                
+                <span class="currenttime">
+                    <span class="time"> {time} </span>
+                    <span class="date"> {date} </span>
+                 </span>
+        </div>
+        <div class="bottom">
+            <span> <input type="text" id="input" placeholder="Enter Your City Name" value="London"> </span>  <button  id="btnc"> click </button> 
+           
+        </div>
+
+    </div>
+    </div>
+    <script src="main.js">  
+    </script>
+</body>
+</html>
